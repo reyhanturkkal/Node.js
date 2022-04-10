@@ -1,0 +1,37 @@
+html 
+  head 
+    title Hello Pug 
+  body  
+   //-This is comment line
+   include navbar.pug
+   br
+   - var jobTitle = "Forward Configuration Technician"
+   - var jobDesc = "Human"
+   hr
+   =jobTitle 
+   br
+   =jobDesc
+   br
+   - let city = "East Andymouth"
+   | City: #{city.toUpperCase()}
+   hr
+   br
+   p #{name} #{phone}
+   br
+   include menu.pug 
+   br
+   - var friends = 10
+   case friends 
+      when 0
+        p You have no friends
+      when 1
+        p You have a friend 
+      default 
+        p You have #{friends} friends
+        ul
+  each val, index in ['zero', 'one', 'two']
+    li= index + ': ' + val
+    br
+  include footer.pug
+
+     
