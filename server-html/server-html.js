@@ -11,5 +11,4 @@ const myServer = http.createServer((req,res)=>{
         response.end(data)
     })
 })
-
 myServer.listen(3000)
